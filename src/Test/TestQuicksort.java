@@ -7,18 +7,18 @@ public class TestQuicksort {
 
 	public static void main(String[] args) {
 		
-		//Creacion de array aleatorio
-		int[] arr1 = CrearArray.generarArrayAleatorio(10000000, 1, 50000);
-		int[] arr2 = Arrays.copyOf(arr1, arr1.length);
-		double arranco, fin;
+	    //Creacion de array aleatorio
+	    int[] arr1 = CrearArray.generarArrayAleatorio(10000000, 1, 50000);
+            int[] arr2 = Arrays.copyOf(arr1, arr1.length);
+	    double arranco, fin;
 		
-		//System.out.println(Arrays.arrayToString(arr)); //Array aleaotorio desordenado
+	    //System.out.println(Arrays.arrayToString(arr)); //Array aleaotorio desordenado
 		
-		//--------------------------------------------------------------------------------------------
-		//-------------------------------- QUICK SORT, SOLUCIÓN CONCURRENTE ---------------------------
-		//--------------------------------------------------------------------------------------------
+	    //--------------------------------------------------------------------------------------------
+            //-------------------------------- QUICK SORT, SOLUCIÓN CONCURRENTE ---------------------------
+	    //--------------------------------------------------------------------------------------------
 		
-		Quicksort_concurrente quickSort = new Quicksort_concurrente(arr1);
+	    Quicksort_concurrente quickSort = new Quicksort_concurrente(arr1);
 
 	    ForkJoinPool pool = new ForkJoinPool();
 	    
@@ -34,19 +34,19 @@ public class TestQuicksort {
 	    
 	    //System.out.println(Arrays.arrayToString(arr1)); //Array ordenado concurrentemente
 		
-		//--------------------------------------------------------------------------------------------
-		//-------------------------------- QUICK SORT, SOLUCIÓN SECUENCIAL ---------------------------
-		//--------------------------------------------------------------------------------------------
+	    //--------------------------------------------------------------------------------------------
+	    //-------------------------------- QUICK SORT, SOLUCIÓN SECUENCIAL ---------------------------
+	    //--------------------------------------------------------------------------------------------
 
-		arranco = System.currentTimeMillis();
+	    arranco = System.currentTimeMillis();
 		
-		Quicksort_secuencial.quickSort(arr2, 0, arr2.length - 1);
+	    Quicksort_secuencial.quickSort(arr2, 0, arr2.length - 1);
 		
-		fin = System.currentTimeMillis() - arranco;
+	    fin = System.currentTimeMillis() - arranco;
 	
-		System.out.println("\nSolucion secuencial ---> " + fin + " milisegundos");
+	    System.out.println("\nSolucion secuencial ---> " + fin + " milisegundos");
 		
-		//System.out.println(Arrays.arrayToString(arr2)); //Array ordenado secuencialmente
+	    //System.out.println(Arrays.arrayToString(arr2)); //Array ordenado secuencialmente
 		
 		
 	}
