@@ -18,9 +18,9 @@ public class Quicksort_secuencial {
 	private static int partition(int[] arr, int low, int high) {
 		
 		int pivot = arr[low]; //Se elige el primer elemento como pivote
-		int i = low - 1; //Posicion del ultimo elemento mas pequeño que el pivote
+		int i = low; //Posicion del ultimo elemento mas pequeño que el pivote
 		
-		for (int j = low; j < high; j++) { //Se recorre todo el array
+		for (int j = low+1; j < high; j++) { //Se recorre todo el array
 			
 			if (arr[j] < pivot) { //Si el elemento es menor que el pivote
 				
@@ -34,8 +34,8 @@ public class Quicksort_secuencial {
 		
 		//Intercambiamos el pivote por ultimo, acomodando donde debe estar
 		int temp = arr[i + 1];
-		arr[i + 1] = arr[high];
-		arr[high] = temp;
+		arr[i + 1] = arr[low];
+		arr[low] = temp;
 		
 		return i + 1; // Retornamos la posicion final del pivote
 		
