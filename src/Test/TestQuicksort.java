@@ -8,7 +8,7 @@ public class TestQuicksort {
 	public static void main(String[] args) {
 		
 	    //Creacion de array aleatorio
-	    int[] arr1 = CrearArray.generarArrayAleatorio(50000000, 1, 50000);
+	    int[] arr1 = CrearArray.generarArrayAleatorio(5000000, 1, 50000);
            int[] arr2 = Arrays.copyOf(arr1, arr1.length);
 	    double arranco, fin;
 		

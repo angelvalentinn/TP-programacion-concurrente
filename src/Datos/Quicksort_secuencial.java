@@ -11,6 +11,7 @@ public class Quicksort_secuencial {
 			int pi = partition(arr, low, high);
 			quickSort(arr, low, pi - 1); //Se repite el ciclo con sub arreglo izq
 			quickSort(arr, pi + 1, high); //Se repite el ciclo con sub arreglo der
+			
 		}
 		
 	}
@@ -32,7 +33,7 @@ public class Quicksort_secuencial {
 			
 		}
 		
-		//Intercambiamos el pivote por ultimo, acomodando donde debe estar
+		//Intercambiamos el pivote por el elemento de la derecha del ultimo menor, acomodando donde debe estar
 		int temp = arr[i + 1];
 		arr[i + 1] = arr[low];
 		arr[low] = temp;
@@ -40,5 +41,6 @@ public class Quicksort_secuencial {
 		return i + 1; // Retornamos la posicion final del pivote
 		
 	}
+
 	
 }

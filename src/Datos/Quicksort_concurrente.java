@@ -3,6 +3,7 @@ import java.util.concurrent.RecursiveAction;
 
 //https://gist.github.com/EliaRohana/25b924048d990c5358313d18daf8f491
 //Extiende de RecursiveAction para permitir ejecucion paralela con pileta de hilos
+
 public class Quicksort_concurrente extends RecursiveAction{
 	
   private int[] data;
